@@ -10,12 +10,12 @@
     <div class="carousel-inner">
         {% for f in featured %}
             <div class="carousel-item {% if f == featured|first %}active{% endif %}">
-                <div class="px-5 p-md-5 mb-4 rounded text-bg-success bg-gradient" style="height: 300px">
+                <div class="px-5 p-md-5 mb-4 rounded text-bg-success bg-dark" style="height: 300px">
                     <div class="col-md-10 px-5 mx-5">
                         <h1 class="display-4 fw-bold px-5">{{ f.title }}</h1>
                         <p class="lead my-3 px-5">{{ f.overview }}</p>
-                        <p class="lead mb-0 px-5"><a href="#" class="text-white fw-bold">Continue
-                            reading...</a></p>
+                        <p class="lead mb-0 px-5"><a href="#" class="text-white fw-bold">Continuar
+                            leyendo...</a></p>
                     </div>
                 </div>
             </div>

@@ -22,4 +22,9 @@ def home_page(request):
 
 
 class PostDetailView(generic.DetailView):
-    model=Post
+    model = Post
+    #metodo para que tome en cuenta las categorias
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
