@@ -21,7 +21,7 @@
                 {% for post in post_list %}
                     <article class="blog-post">
                         <h2 class="blog-post-title mb-1">
-                            <a href="{{post.get_absolute_url}}" style="text-decoration: none"   
+                            <a href="{% url 'blogs:post' post.id %}" style="text-decoration: none"   
                                class="text-black">
                                 {{ post.title }}
                             </a>
@@ -48,6 +48,8 @@
                 </div>
             </div>
         </div>
+
+        
 
     </main>
 </div>
