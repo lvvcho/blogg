@@ -34,13 +34,14 @@ class Post(models.Model):
 
 
 class Category(models.Model):
-    title=models.CharField(max_length=255)
-    slug=models.SlugField(unique=True)
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name_plural = 'categories'
 
-   
-    
+    def get_absolute_url(self):
+        return reverse("blogs:category", kwargs={"pk": self.pk})
+
     def __str__(self):
         return self.title
